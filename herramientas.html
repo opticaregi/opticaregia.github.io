@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script>
+    var state = false;
+    function display(){
+      if (!state){
+        document.getElementById("dropdown-cont").style.display = "none";
+        state = true;
+      }else{
+        document.getElementById("dropdown-cont").style.display = "block";
+        state = false;
+      }
+    }
+    function change(a){
+      location.href = a;
+    }
+    </script>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+  <body>
+    <div id="banner">
+
+      <div id="in-banner">
+        <img id ="logo" src="opticaregia.png">
+        <div id="moving"></div>
+      </div>
+
+    </div>
+
+    <div id="mob-menu" onclick="display()">
+        <span id="dropdown"> Menu </span>
+        <div id="dropdown-cont">
+          <p style="border-top: 3px solid black;" onclick="change('index.html')">Página principal</p>
+          <p onclick="change('metodologia.html')">Metodología</p>
+          <p onclick="change('formas.html')">Formas de Pago</p>
+          <p onclick="change('beneficios.html')">Beneficios</p>
+          <p onclick="change('herramientas.html')">Instrumentos y micas</p>
+          <p onclick="change('contacto.html')">Contacto</p>
+
+        </div>
+
+
+    </div>
+
+    <ul id="menu">
+      <li onclick="change(this.firstChild.href)"><a href="index.html">Página principal</a></li>
+      <li onclick="change(this.firstChild.href)"><a href="metodologia.html">Metodología</a></li>
+      <li onclick="change(this.firstChild.href)"><a href="formas.html">Formas de Pago</a></li>
+      <li onclick="change(this.firstChild.href)"><a href="beneficios.html">Beneficios</a></li>
+      <li onclick="change(this.firstChild.href)"><a href="herramientas.html">Instrumentos</a></li>
+      <li onclick="change(this.firstChild.href)"><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <div id="main-page">
+      <div id="title">
+        <h1>Herramientas y micas</h1>
+        <p>Nuestras herramientas son de la más sofisticada tecnología
+          y garantizan la satisfacción del cliente.</p>
+      </div>
+      <div id="tools">
+        <div id="button" onclick="visual.previous()"><</div>
+        <img id="tool" src="aparato1.png">
+        <div id="button2" style="" onclick="visual.next()">></div>
+
+      </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <script>
+      var visual={
+        images: 1,
+        canvas: document.getElementById("tool"),
+        next: function(){
+          this.images++;
+          if(this.images == 7)
+            this.images = 1;
+          this.canvas.src = "aparato" + this.images + ".png";
+        },
+        previous: function(){
+          this.images--;
+          if(this.images == 0)
+            this.images = 6;
+          this.canvas.src = "aparato" + this.images + ".png";
+        }
+      };
+
+
+
+    </script>
+
+  </body>
+
+</html>

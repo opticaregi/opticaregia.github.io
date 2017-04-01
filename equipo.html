@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body>
+    <div id="main-page">
+      <div id="tools">
+        <div id="button" onclick="visual.previous()"><</div>
+        <img id="tool" src="aparato1.png">
+        <div id="button" style="margin-left:62%;margin-top:-500px" onclick="visual.next()">></div>
+
+      </div>
+    </div>
+  <script>
+    var visual={
+      images: 1,
+      canvas: document.getElementById("tool"),
+      next: function(){
+        this.images++;
+        if(this.images == 7)
+          this.images = 1;
+        this.canvas.src = "aparato" + this.images + ".png";
+      },
+      previous: function(){
+        this.images--;
+        if(this.images == 0)
+          this.images = 6;
+        this.canvas.src = "aparato" + this.images + ".png";
+      }
+    };
+
+
+
+  </script>
+
+  </body>

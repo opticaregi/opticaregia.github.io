@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script>
+    var state = true;
+    function display(){
+      if (!state){
+        document.getElementById("dropdown-cont").style.display = "none";
+        state = true;
+      }else{
+        document.getElementById("dropdown-cont").style.display = "block";
+        state = false;
+      }
+    }
+    function change(a){
+      location.href = a;
+    }
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+
+      <div id="in-banner">
+        <img id ="logo" src="opticaregia.png">
+        <div id="moving"></div>
+      </div>
+
+    </div>
+
+    <div id="mob-menu" onclick="display()">
+        <span id="dropdown"> Menu </span>
+        <div id="dropdown-cont">
+          <p style="border-top: 3px solid black;" onclick="change('index.html')">Página principal</p>
+          <p onclick="change('metodologia.html')">Metodología</p>
+          <p onclick="change('formas.html')">Formas de Pago</p>
+          <p onclick="change('beneficios.html')">Beneficios</p>
+          <p onclick="change('herramientas.html')">Instrumentos y micas</p>
+          <p onclick="change('contacto.html')">Contacto</p>
+
+        </div>
+
+
+    </div>
+
+    <ul id="menu">
+      <li onclick="change(this.firstChild.href)"><a href="index.html">Página principal</a></li>
+      <li onclick="change(this.firstChild.href)"><a href="metodologia.html">Metodología</a></li>
+      <li onclick="change(this.firstChild.href)"><a href="formas.html">Formas de Pago</a></li>
+      <li onclick="change(this.firstChild.href)"><a href="beneficios.html">Beneficios</a></li>
+      <li onclick="change(this.firstChild.href)"><a href="herramientas.html">Instrumentos</a></li>
+      <li onclick="change(this.firstChild.href)"><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <div id="main-page">
+      <div id="title">
+        <h1>Formas de pago</h1>
+        El empleado podrá adquirir sus lentes con
+        las siguientes opciones de pago: <br/>
+        <ul>
+          <li>Efectivo, pago en una sola exhibición,
+            descuento del 20% en costo de armazón.</li>
+          <li>Pago con tarjeta de débito descuento del 10%
+            en importe total</li>
+          <li>Pago con tarjeta de crédito en una sola exhibicón
+            o a 3 meses sin intereses(Monto minímo: $1500)</li>
+          <li>Descuento por nómina:
+            <ul>
+              <li>Importe de $500 a $100: Descuento en 3 quincenas</li>
+              <li>$1000 a $1500: Descuento en 4 quincenas</li>
+              <li>Mayor a $1500: Descuento en 6 quincenas</li>
+            </ul>
+          </li>
+        </ul>
+        <br/>
+        <br/>
+      </div>
+
+
+
+
+    </div>
+    <br/>
+    <br/>
+
+  </body>
+
+</html>
