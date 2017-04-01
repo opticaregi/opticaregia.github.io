@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script>
+    var state = false;
+    function display(){
+      if (!state){
+        document.getElementById("dropdown-cont").style.display = "none";
+        state = true;
+      }else{
+        document.getElementById("dropdown-cont").style.display = "block";
+        state = false;
+      }
+    }
+    function change(a){
+      location.href = a;
+    }
+    </script>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+  <body>
+    <div id="banner">
+
+      <div id="in-banner">
+        <img id ="logo" src="opticaregia.png">
+        <div id="moving"></div>
+      </div>
+
+    </div>
+
+    <div id="mob-menu" onclick="display()">
+        <span id="dropdown"> Menu </span>
+        <div id="dropdown-cont">
+          <p style="border-top: 3px solid black;" onclick="change('index.html')">Página principal</p>
+          <p onclick="change('metodologia.html')">Metodología</p>
+          <p onclick="change('formas.html')">Formas de Pago</p>
+          <p onclick="change('beneficios.html')">Beneficios</p>
+          <p onclick="change('herramientas.html')">Instrumentos</p>
+          <p onclick="change('contacto.html')">Contacto</p>
+
+        </div>
+
+
+    </div>
+
+    <ul id="menu">
+      <li onclick="change(this.firstChild.href)"><a href="index.html">Página principal</a></li>
+      <li onclick="change(this.firstChild.href)"><a href="metodologia.html">Metodología</a></li>
+      <li onclick="change(this.firstChild.href)"><a href="formas.html">Formas de Pago</a></li>
+      <li onclick="change(this.firstChild.href)"><a href="beneficios.html">Beneficios</a></li>
+      <li onclick="change(this.firstChild.href)"><a href="herramientas.html">Instrumentos</a></li>
+      <li onclick="change(this.firstChild.href)"><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <div id="main-page">
+      <div id="title">
+        <h1>Contacto</h1>
+        <p>Si tiene más preguntas, puede contactar a:</p>
+        <p style="text-align:center;">Lic. Rosa María Palacios Valdez<br>
+          Optometrista<br>
+          CEL: 55 2714 6393<br>
+          EMAIL: 11rpalace@gmail.com<br>
+        </p>
+        <p>O puede usar la forma que se presenta abajo. Se recomienda llenar todos
+          los campos para establecer una comunicación más óptima. Si no recibe
+           un correo de mensaje recibido, contacte a la optometrista directamente
+           usando alguno de los medios mencionados arriba.</p>
+    <form  action = "http://opticaregia1122.byethost10.com/method.php" method="post" id="cont-form">
+      <fieldset>
+        <legend>Completar</legend>
+        <label>*Nombre:<br><input class="fields" type="text" name="name" required></label><br>
+        <label>Dirección de correo electrónico:<br><input  class="fields" type="text" name="email"></label><br>
+        <label>Número de telefono:<br><input class="fields" type="text" name="phone"></label><br>
+        <label>Número de celular:<br><input  class="fields" type="text" name="cellphone"></label><br>
+        <label>Información que requiere:<br></label><textarea style="width:100%;height:250px;" name="message" placeholder="Aquí su mensaje"></textarea>
+        <input type="submit" value="Enviar" style="width:100%;height:50px;background-color:#963b1d;font-size:30px;">
+      </fieldset>
+
+    </form>
+
+      </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+
+  </body>
+
+</html>
