@@ -6,7 +6,7 @@
   height: 200px;
   margin-left: 2.5%;
   width: 95%;
-  background-color: #DA633A;
+  background-color: red;
 }
 
 #button{
@@ -100,15 +100,28 @@
 }
 
 #main-page{
+  position: absolute;
   margin-top: 10px;
   margin-left: 26%;
   width: 72%;
   height: auto;
   border-style: solid;
+  border-color: black;
   border-width: 3px;
   border-radius: 2px;
   box-shadow: 2px 4px 4px 4px gray;
 
+}
+
+#main-page:before{
+  content: " ";
+  position: absolute;
+  z-index: 40;
+  top: 0.3px;
+  left: 0.05%;
+  right: 0.05%;
+  bottom: 3px;
+  border: 3px solid red;
 }
 
 #main-page h1{
@@ -116,10 +129,10 @@
 }
 
 #main-page #title{
-  background-color: #DA633A;
+  background-color: white;
   border-bottom-style: solid;
   border-bottom-color: black;
-  padding: 10px;
+  padding: 2%;
   text-align: justify;
   font-size: 3vh;
 
@@ -159,7 +172,7 @@
   position: absolute;
   margin-left: 1%;
   margin-top: 10px;
-  background-color:  #DA633A;
+  background-color:  white;
   list-style-type: none;
   color: black;
   text-align: center;
@@ -168,6 +181,7 @@
 }
 
 #menu li{
+  position: relative;
   transition: background-color 1s;
   border-style: solid;
   border-width: 3px;
@@ -176,12 +190,24 @@
   line-height: 100px;
 }
 
+#menu li:before{
+  content: " ";
+  position: absolute;
+  z-index: 40;
+  top: 0.3px;
+  left: 0.5px;
+  right: 0.2px;
+  bottom: 0.5px;
+  border: 3px solid red;
+}
+
 #menu li:hover{
   background-color: #963b1d;
 }
 
 #mob-menu{
   font-size: 30px;
+  z-index: 50;
   position: relative;
   display: none;
   width: 100%;
@@ -242,10 +268,7 @@
 }
 
 html{
-  background-image: url("background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+
 
 }
 

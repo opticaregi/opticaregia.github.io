@@ -6,10 +6,10 @@
     var state = false;
     function display(){
       if (!state){
-        document.getElementById("dropdown-cont").style.display = "none";
+        document.getElementById("dropdown-cont").style.display = "block";
         state = true;
       }else{
-        document.getElementById("dropdown-cont").style.display = "block";
+        document.getElementById("dropdown-cont").style.display = "none";
         state = false;
       }
     }
@@ -27,11 +27,12 @@
         <img id ="logo" src="opticaregia.png">
         <div id="moving"></div>
       </div>
+      <span style="font-weight: bold;">Al SERVICIO DE SU SALUD VISUAL</span>
 
     </div>
 
     <div id="mob-menu" onclick="display()">
-        <span id="dropdown"> Menu </span>
+        <span id="dropdown">+Más información </span>
         <div id="dropdown-cont">
           <p style="border-top: 3px solid black;" onclick="change('index.html')">Página principal</p>
           <p onclick="change('metodologia.html')">Metodología</p>
@@ -56,7 +57,10 @@
 
     <div id="main-page">
       <div id="title">
-        <h1 style="border-bottom:none;">Óptica Regia </h1>
+        <h1 style="border-bottom:none;color:red;">Óptica Regia </h1>
+        <p>Especialistas en atención a empresas interesadas en
+           mejorar la calidad de vida de sus colaboradores y en consecuencia
+           incrementando el desempeño laboral</p><br/>
         <p>Empresa enfocada en mejorar la salud
             y protección visual a través de productos
             y servicios en optometría. Ofreciendo
@@ -66,30 +70,26 @@
            su satisfacción.
         </p>
       </div>
-      <div id="title" style="height: 400px;">
-        <div id="promocion">
-          <h1 style="font-size: 5vh;">Descuentos</h1>
-          <p>Lentes graduados. Incluye estuche rígido
-              y microfibra. Garantía por servicio y materiales
-               por 3 meses.
-          </p>
-        </div>
-        <div id="aclaracion">
-          <p>Estaremos en Irapuato las fechas 3 y
-             4 de abril, en el edificio Alfa Irapuato 99 ubicado en
-              Colonía clavería,  en sala de juntas planta baja.
-          </p>
+      <div id="title" style="">
+        <p>Llevamos nuestro equipo digital y nuestro personal, a
+          su centro de trabajo para realizar los examenes de la vista sin costo,
+          en caso de requerir lentes graduados, ofrecemos <b style="color:red;">DESCUENTOS ESPECIALES</b>
+           con diferntes formas de pago como es efectivo o tarjeta bancaria VISA
+           MASTER CARD, CARNET y AMEX así como vales electrónicos SODEXO y
+           UP SI VALE. Obsequiamos estuche y microfibra en la adquisicón de sus lentes.</p>
+           <br/>
+           <p>Garantía por 3 meses</p>
           <div id="image"></div>
-        </div>
       </div>
       <div id="title" >
-        Manejamos las siguientes marcas:
+        Ofrecemos lentes con tratamientos especiales en caso de requerirlo como:
         <ul style="padding-left: 5%;">
-          <li>ESSILOR</li>
-          <li>CRIZAl</li>
-          <li>TRANSITIONS</li>
-          <li>ZEISS</li>
-          <li>SETO</li>
+          <li>Protección anti-blue ray (rayos emitidos por pc's, laptops y celulares)</li>
+          <li>Fotocromáticos</li>
+          <li>Graduaciones altas con micas adelgazadas</li>
+          <li>Lentes de contacto blandos y rígidos</li>
+          <li>Lentes solares</li>
+          <li>Otros productos</li>
         </ul>
         <br/>
         <h1 style="font-size: 5vh;border-bottom:none;">Para más información</h1>
