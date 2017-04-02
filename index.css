@@ -215,6 +215,10 @@
 
 }
 
+#mob-menu p {
+  color: white;
+}
+
 #moving{
   display: none;
   background-color: black;
