@@ -290,7 +290,10 @@ a{
 
   }
 
-
+  #button2{
+    margin-left: 90%;
+    margin-top: -505px;
+  }
 
   #main-page{
     margin-left: 5%;
