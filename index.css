@@ -18,7 +18,7 @@
   line-height: 500px;
   display: inline-block;
   height: 500px;
-  z-index: 5;
+  z-index: 60;
   width: 10%;
   background-color: black;
   opacity: 0.4;
@@ -33,12 +33,11 @@
   line-height: 500px;
   display: inline-block;
   height: 500px;
-  z-index: 5;
+  z-index: 60;
   width: 10%;
   background-color: black;
   opacity: 0.4;
-  margin-left: 62%;
-  margin-top:-505px;
+  margin-left: -10%;
 }
 
 #button:active{
@@ -291,9 +290,7 @@ a{
 
   }
 
-  #button2{
-    margin-left: 80%;
-  }
+
 
   #main-page{
     margin-left: 5%;
